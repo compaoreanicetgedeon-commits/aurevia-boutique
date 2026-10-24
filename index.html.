@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AURÉVIA | Élégance & Style</title>
+
+<meta name="description"
+content="Découvrez AURÉVIA, votre boutique d'accessoires et de produits tendance.">
+
+<style>
+:root {
+    --black: #080808;
+    --gold: #d4af37;
+    --white: #ffffff;
+    --gray: #171717;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background:
+        radial-gradient(ellipse at center,
+        #30250d 0%, #111111 45%, #080808 75%);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 76px);
+    letter-spacing: 8px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #dddddd;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: #080808;
+    padding: 14px 25px;
+    margin-top: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 60px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--gold);
+}
+
+.section-description {
+    text-align: center;
+    color: #aaaaaa;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product {
+    background: var(--gray);
+    border: 1px solid #292929;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    background: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-placeholder {
+    color: #aaaaaa;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.product h3 {
+    margin: 20px 10px 10px;
+    font-size: 18px;
+}
+
+.price {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.order-button {
+    display: inline-block;
+    padding: 12px 16px;
+    background: #176b38;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.order-button:hover {
+    background: #208c4b;
+}
+
+.about {
+    text-align: center;
+    background: #111111;
+}
+
+.about p {
+    max-width: 650px;
+    margin: 20px auto;
+    line-height: 1.9;
+    color: #cccccc;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 1px solid #292929;
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .hero h1 {
+        letter-spacing: 4px;
+    }
+
+    .section {
+        padding: 45px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AURÉVIA</div>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#produits">Produits</a>
+        <a href="#apropos">À propos</a>
+    </nav>
+</header>
+
+<section class="hero" id="accueil">
+    <h1>AURÉVIA</h1>
+
+    <p>
+        L'élégance dans chaque détail.<br>
+        Découvrez des accessoires qui reflètent votre style.
+    </p>
+
+    <a href="#produits" class="button">
+        DÉCOUVRIR NOS PRODUITS
+    </a>
+</section>
+
+<section class="section" id="produits">
+
+    <h2 class="section-title">Notre collection</h2>
+
+    <p class="section-description">
+        Découvrez nos produits et commandez facilement.
+    </p>
+
+    <div class="products" id="product-list"></div>
+
+</section>
+
+<section class="section about" id="apropos">
+
+    <h2 class="section-title">À propos d'AURÉVIA</h2>
+
+    <p>
+        Bienvenue chez AURÉVIA, votre boutique en ligne dédiée
+        au style et aux accessoires tendance.
+        Notre objectif est de vous proposer des produits
+        soigneusement sélectionnés à des prix accessibles.
+    </p>
+
+    <p>
+        Une question sur un produit ?
+        Contactez-nous directement sur WhatsApp.
+    </p>
+
+    <a class="button"
+       href="https://wa.me/22607721361?text=Bonjour%20AUR%C3%89VIA%2C%20je%20souhaite%20des%20informations."
+       target="_blank"
+       rel="noopener">
+        NOUS CONTACTER
+    </a>
+
+</section>
+
+<footer>
+    <p>© 2026 <span>AURÉVIA</span> — Élégance & Style.</p>
+    <p style="margin-top: 10px;">Merci pour votre confiance.</p>
+</footer>
+
+<script>
+/*
+  Les images seront ajoutées dans une prochaine étape.
+  Les fichiers images devront porter les noms indiqués ici.
+*/
+
+const whatsapp = "22607721361";
+
+const products = [
+    {
+        name: "Montre Casio 1",
+        price: 10000,
+        image: "images/casio-1.jpg"
+    },
+    {
+        name: "Montre Casio 2",
+        price: 10000,
+        image: "images/casio-2.jpg"
+    },
+    {
+        name: "Montre Casio 3",
+        price: 10000,
+        image: "images/casio-3.jpg"
+    },
+    {
+        name: "Montre Casio 4",
+        price: 10000,
+        image: "images/casio-4.jpg"
+    },
+    {
+        name: "Montre Casio 5",
+        price: 10000,
+        image: "images/casio-5.jpg"
+    },
+    {
+        name: "Montre Casio 6",
+        price: 10000,
+        image: "images/casio-6.jpg"
+    },
+    {
+        name: "Montre Casio 7",
+        price: 10000,
+        image: "images/casio-7.jpg"
+    },
+    {
+        name: "AirPods Pro 2",
+        price: 5000,
+        image: "images/airpods-pro-2.jpg"
+    },
+    {
+        name: "AirPods 4",
+        price: 6000,
+        image: "images/airpods-4.jpg"
+    },
+    {
+        name: "Produit Forever 1",
+        price: null,
+        image: "images/forever-1.jpg"
+    },
+    {
+        name: "Produit Forever 2",
+        price: null,
+        image: "images/forever-2.jpg"
+    }
+];
+
+const list = document.getElementById("product-list");
+
+products.forEach(product => {
+    const card = document.createElement("article");
+    card.className = "product";
+
+    const imageBox = document.createElement("div");
+    imageBox.className = "product-image";
+
+    const img = document.createElement("img");
+    img.src = product.image;
+    img.alt = product.name;
+    img.loading = "lazy";
+
+    img.onerror = () => {
+        imageBox.innerHTML =
+            '<span class="image-placeholder">Photo du produit à ajouter</span>';
+    };
+
+    imageBox.appendChild(img);
+
+    const title = document.createElement("h3");
+    title.textContent = product.name;
+
+    const price = document.createElement("p");
+    price.className = "price";
+    price.textContent = product.price === null
+        ? "Nous contacter"
+        : product.price.toLocaleString("fr-FR") + " F CFA";
+
+    const message = product.price === null
+        ? "Bonjour AURÉVIA, je souhaite des informations sur " + product.name + "."
+        : "Bonjour AURÉVIA, je souhaite commander " +
+          product.name + " au prix de " +
+          product.price.toLocaleString("fr-FR") + " F CFA.";
+
+    const button = document.createElement("a");
+    button.className = "order-button";
+    button.href = "https://wa.me/" + whatsapp +
+        "?text=" + encodeURIComponent(message);
+    button.target = "_blank";
+    button.rel = "noopener";
+    button.textContent = product.price === null
+        ? "SE RENSEIGNER"
+        : "COMMANDER SUR WHATSAPP";
+
+    card.append(imageBox, title, price, button);
+    list.appendChild(card);
+});
+</script>
+
+</body>
+</html>
