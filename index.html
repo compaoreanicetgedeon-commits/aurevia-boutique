@@ -1,424 +1,402 @@
-            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AURÉVIA | Élégance & Style</title>
-
-<meta name="description"
-content="Découvrez AURÉVIA, votre boutique d'accessoires et de produits tendance.">
-
-<style>
-:root {
-    --black: #080808;
-    --gold: #d4af37;
-    --white: #ffffff;
-    --gray: #171717;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: var(--black);
-    color: var(--white);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 7%;
-    border-bottom: 1px solid #292929;
-}
-
-.logo {
-    color: var(--gold);
-    font-size: 27px;
-    font-weight: bold;
-    letter-spacing: 4px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 22px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: var(--gold);
-}
-
-.hero {
-    min-height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-    background:
-        radial-gradient(ellipse at center,
-        #30250d 0%, #111111 45%, #080808 75%);
-}
-
-.hero h1 {
-    font-size: clamp(42px, 8vw, 76px);
-    letter-spacing: 8px;
-    color: var(--gold);
-    margin-bottom: 20px;
-}
-
-.hero p {
-    color: #dddddd;
-    font-size: 17px;
-    line-height: 1.8;
-    max-width: 550px;
-}
-
-.button {
-    display: inline-block;
-    background: var(--gold);
-    color: #080808;
-    padding: 14px 25px;
-    margin-top: 28px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: white;
-    transform: translateY(-2px);
-}
-
-.section {
-    padding: 60px 7%;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 15px;
-    color: var(--gold);
-}
-
-.section-description {
-    text-align: center;
-    color: #aaaaaa;
-    margin-bottom: 40px;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-}
-
-.product {
-    background: var(--gray);
-    border: 1px solid #292929;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    padding-bottom: 25px;
-    transition: 0.3s;
-}
-
-.product:hover {
-    border-color: var(--gold);
-    transform: translateY(-5px);
-}
-
-.product-image {
-    width: 100%;
-    height: 220px;
-    background: #222222;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.image-placeholder {
-    color: #aaaaaa;
-    font-size: 14px;
-    padding: 15px;
-}
-
-.product h3 {
-    margin: 20px 10px 10px;
-    font-size: 18px;
-}
-
-.price {
-    color: var(--gold);
-    font-weight: bold;
-    font-size: 19px;
-    margin: 12px 0;
-}
-
-.order-button {
-    display: inline-block;
-    padding: 12px 16px;
-    background: #176b38;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 10px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.order-button:hover {
-    background: #208c4b;
-}
-
-.about {
-    text-align: center;
-    background: #111111;
-}
-
-.about p {
-    max-width: 650px;
-    margin: 20px auto;
-    line-height: 1.9;
-    color: #cccccc;
-}
-
-footer {
-    text-align: center;
-    padding: 30px 15px;
-    border-top: 1px solid #292929;
-    color: #aaaaaa;
-    font-size: 13px;
-}
-
-footer span {
-    color: var(--gold);
-}
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="AURÉVIA : montres Casio, écouteurs et produits Forever Living. Découvrez la collection et contactez-nous pour commander.">
+  <title>AURÉVIA | Élégance & Style</title>
+  <style>
+    :root {
+      --black: #090909;
+      --panel: #141414;
+      --panel-light: #1b1b1b;
+      --gold: #d4af37;
+      --gold-light: #f0d982;
+      --white: #fff;
+      --muted: #b8b8b8;
+      --line: rgba(212, 175, 55, .22);
+      --green: #176b38;
     }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 17px 7%;
+      background: rgba(9, 9, 9, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    .logo {
+      color: var(--gold);
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
     nav a {
-        margin: 0 7px;
+      color: #eee;
+      font-size: 14px;
+      text-decoration: none;
+      transition: color .2s ease;
     }
+    nav a:hover { color: var(--gold-light); }
 
+    .hero {
+      min-height: 470px;
+      display: grid;
+      place-items: center;
+      padding: 78px 20px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 35%, rgba(212,175,55,.19), transparent 48%),
+        linear-gradient(135deg, #15120a, #090909 65%);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-content { max-width: 760px; }
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
     .hero h1 {
-        letter-spacing: 4px;
+      margin: 14px 0;
+      color: var(--gold);
+      font-size: clamp(44px, 9vw, 82px);
+      letter-spacing: clamp(5px, 1vw, 11px);
+      line-height: 1.1;
     }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ddd;
+      font-size: 17px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 24px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      background: var(--gold);
+      color: #111;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { background: var(--gold-light); transform: translateY(-2px); }
 
-    .section {
-        padding: 45px 5%;
+    .section { padding: 68px 7%; }
+    .section-heading { margin-bottom: 34px; text-align: center; }
+    .section-heading h2 {
+      color: var(--gold);
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.25;
     }
-}
-</style>
+    .section-heading p { margin-top: 10px; color: var(--muted); }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+    .product {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 22px;
+      border: 1px solid #2b2b2b;
+      border-radius: 9px;
+      background: linear-gradient(160deg, #1b1b1b, #111);
+      text-align: center;
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: 0 12px 30px rgba(0,0,0,.28);
+    }
+    .product-image {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 245px;
+      overflow: hidden;
+      background: #202020;
+    }
+    .product-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 9px;
+      object-fit: contain;
+    }
+    .product-category {
+      align-self: center;
+      margin: 18px 12px 0;
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .product h3 { margin: 7px 12px 0; font-size: 18px; }
+    .product-description { margin: 7px 16px 0; color: var(--muted); font-size: 13px; }
+    .price { margin: 12px 0 0; color: var(--gold); font-size: 20px; font-weight: 800; }
+    .order-button {
+      align-self: center;
+      display: inline-block;
+      margin: auto 12px 0;
+      margin-top: 17px;
+      padding: 11px 15px;
+      border-radius: 4px;
+      background: var(--green);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background .2s ease;
+    }
+    .order-button:hover { background: #21864a; }
+    .gallery-button {
+      align-self: center;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: transparent;
+      color: var(--gold-light);
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .gallery-button:hover { background: rgba(212,175,55,.1); }
+    .image-placeholder { padding: 20px; color: var(--muted); font-size: 13px; }
+
+    .about {
+      background: #111;
+      border-top: 1px solid #242424;
+      border-bottom: 1px solid #242424;
+      text-align: center;
+    }
+    .about-copy { max-width: 720px; margin: 17px auto 0; color: #ccc; }
+    .delivery-note { color: var(--gold-light); }
+    footer {
+      padding: 28px 15px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    footer strong { color: var(--gold); letter-spacing: 1px; }
+
+    @media (max-width: 650px) {
+      .site-header { flex-direction: column; gap: 12px; padding: 14px 5%; }
+      nav { justify-content: center; gap: 15px; }
+      nav a { font-size: 13px; }
+      .hero { min-height: 390px; padding: 60px 18px; }
+      .hero p { font-size: 15px; }
+      .section { padding: 48px 5%; }
+      .products { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+      .product-image { height: 220px; }
+    }
+    @media (max-width: 420px) {
+      .products { grid-template-columns: 1fr; }
+      .product-image { height: 250px; }
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
-    <div class="logo">AURÉVIA</div>
-
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#produits">Produits</a>
-        <a href="#apropos">À propos</a>
+  <header class="site-header">
+    <a class="logo" href="#accueil">AURÉVIA</a>
+    <nav aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a>
+      <a href="#produits">Collection</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero" id="accueil">
-    <h1>AURÉVIA</h1>
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <p class="eyebrow">Élégance • Style • Bien-être</p>
+        <h1>AURÉVIA</h1>
+        <p>L'élégance dans chaque détail. Découvrez notre sélection de montres, d'accessoires et de produits de bien-être.</p>
+        <a class="button" href="#produits">DÉCOUVRIR LA COLLECTION</a>
+      </div>
+    </section>
 
-    <p>
-        L'élégance dans chaque détail.<br>
-        Découvrez des accessoires qui reflètent votre style.
-    </p>
+    <section class="section" id="produits">
+      <div class="section-heading">
+        <h2>Notre collection</h2>
+        <p>Choisissez votre produit et contactez-nous pour passer commande.</p>
+      </div>
+      <div class="products" id="product-list" aria-live="polite"></div>
+    </section>
 
-    <a href="#produits" class="button">
-        DÉCOUVRIR NOS PRODUITS
-    </a>
-</section>
+    <section class="section about" id="apropos">
+      <div class="section-heading">
+        <h2>À propos d'AURÉVIA</h2>
+        <p>Une sélection pensée pour votre style et votre quotidien.</p>
+      </div>
+      <p class="about-copy">Bienvenue chez AURÉVIA, votre boutique en ligne d'accessoires et de produits tendance. Pour toute question sur un article, sa disponibilité ou les modalités de livraison, contactez-nous directement.</p>
+      <p class="about-copy delivery-note">Les frais et délais de livraison sont à confirmer avec nous selon votre zone.</p>
+      <a class="button" id="contact" href="https://wa.me/22607721361?text=Bonjour%20AUR%C3%89VIA%2C%20je%20souhaite%20avoir%20des%20informations." target="_blank" rel="noopener noreferrer">CONTACTER AURÉVIA</a>
+    </section>
+  </main>
 
-<section class="section" id="produits">
+  <footer>
+    <p>© 2026 <strong>AURÉVIA</strong> — Élégance & Style.</p>
+    <p style="margin-top:8px;">Merci pour votre confiance.</p>
+  </footer>
 
-    <h2 class="section-title">Notre collection</h2>
-
-    <p class="section-description">
-        Découvrez nos produits et commandez facilement.
-    </p>
-
-    <div class="products" id="product-list"></div>
-
-</section>
-
-<section class="section about" id="apropos">
-
-    <h2 class="section-title">À propos d'AURÉVIA</h2>
-
-    <p>
-        Bienvenue chez AURÉVIA, votre boutique en ligne dédiée
-        au style et aux accessoires tendance.
-        Notre objectif est de vous proposer des produits
-        soigneusement sélectionnés à des prix accessibles.
-    </p>
-
-    <p>
-        Une question sur un produit ?
-        Contactez-nous directement sur WhatsApp.
-    </p>
-
-    <a class="button"
-       href="https://wa.me/22607721361?text=Bonjour%20AUR%C3%89VIA%2C%20je%20souhaite%20des%20informations."
-       target="_blank"
-       rel="noopener">
-        NOUS CONTACTER
-    </a>
-
-</section>
-
-<footer>
-    <p>© 2026 <span>AURÉVIA</span> — Élégance & Style.</p>
-    <p style="margin-top: 10px;">Merci pour votre confiance.</p>
-</footer>
-
-<script>
-/*
-  Les images seront ajoutées dans une prochaine étape.
-  Les fichiers images devront porter les noms indiqués ici.
-*/
-
-const whatsapp = "22607721361";
-
-const products = [
-    {
+  <script>
+    const whatsapp = "22607721361";
+    const products = [
+      {
         name: "Montre Casio 1",
+        category: "Montres Casio",
         price: 10000,
-        image: "images/casio-1.jpg"
-    },
-    {
+        images: ["images/WhatsApp Image 2026-11-06 at 16.17.38.jpeg"]
+      },
+      {
         name: "Montre Casio 2",
+        category: "Montres Casio",
         price: 10000,
-        image: "images/casio-2.jpg"
-    },
-    {
+        images: ["images/WhatsApp Image 2026-11-06 at 16.17.40.jpeg"]
+      },
+      {
         name: "Montre Casio 3",
+        category: "Montres Casio",
         price: 10000,
-        image: "images/casio-3.jpg"
-    },
-    {
+        images: ["images/WhatsApp Image 2026-11-06 at 16.17.41.jpeg"]
+      },
+      {
         name: "Montre Casio 4",
+        category: "Montres Casio",
         price: 10000,
-        image: "images/casio-4.jpg"
-    },
-    {
+        images: ["images/WhatsApp Image 2026-11-06 at 16.17.42.jpeg"]
+      },
+      {
         name: "Montre Casio 5",
+        category: "Montres Casio",
         price: 10000,
-        image: "images/casio-5.jpg"
-    },
-    {
-        name: "Montre Casio 6",
-        price: 10000,
-        image: "images/casio-6.jpg"
-    },
-    {
-        name: "Montre Casio 7",
-        price: 10000,
-        image: "images/casio-7.jpg"
-    },
-    {
+        images: ["images/WhatsApp Image 2026-11-06 at 16.17.43.jpeg"]
+      },
+      {
         name: "AirPods Pro 2",
+        category: "Écouteurs",
         price: 5000,
-        image: "images/WhatsApp Image 2026-11-06 at 16.17.51.jpeg"
-    },
-    {
+        images: [
+          "images/WhatsApp Image 2026-11-06 at 16.17.51.jpeg",
+          "images/ffffb5bb-74db-415b-86a7-2284f889c8e6.png"
+        ],
+        description: "Deux photos disponibles. Utilisez le bouton pour les faire défiler."
+      },
+      {
         name: "AirPods 4",
+        category: "Écouteurs",
         price: 6000,
-        image: "images/new airpods 🤍🎧.jpg"
-    },
-    {
-        name: "Produit Forever 1",
+        images: ["images/new airpods 🤍🎧.jpg"]
+      },
+      {
+        name: "Forever Living — Bien-être",
+        category: "Forever Living",
         price: null,
-        image: "images/forever-1.jpg"
-    },
-    {
-        name: "Produit Forever 2",
+        images: ["images/🌿✨ Prenez soin de votre bien-être au quotidien avec les produits Forever Living ! ✨🌿_Découvrez une gamme complète de produits à base d’Aloe Vera conçus pour accompagner votre santé, votre énergie et votre beauté nat.jpg"],
+        description: "Veuillez nous contacter pour plus d'information."
+      },
+      {
+        name: "Forever Living — Produits",
+        category: "Forever Living",
         price: null,
-        image: "images/forever-2.jpg"
-    }
-];
+        images: ["images/Produtos forever living para o seu dia dia___.jpg"],
+        description: "Veuillez nous contacter pour plus d'information."
+      }
+    ];
 
-const list = document.getElementById("product-list");
+    const list = document.getElementById("product-list");
 
-products.forEach(product => {
-    const card = document.createElement("article");
-    card.className = "product";
+    products.forEach((product) => {
+      const card = document.createElement("article");
+      card.className = "product";
 
-    const imageBox = document.createElement("div");
-    imageBox.className = "product-image";
+      const imageBox = document.createElement("div");
+      imageBox.className = "product-image";
+      const image = document.createElement("img");
+      let currentImage = 0;
+      image.src = product.images[currentImage];
+      image.alt = product.name;
+      image.loading = "lazy";
+      image.onerror = () => {
+        imageBox.innerHTML = '<span class="image-placeholder">Photo du produit indisponible</span>';
+      };
+      imageBox.appendChild(image);
 
-    const img = document.createElement("img");
-    img.src = product.image;
-    img.alt = product.name;
-    img.loading = "lazy";
+      const category = document.createElement("p");
+      category.className = "product-category";
+      category.textContent = product.category;
 
-    img.onerror = () => {
-        imageBox.innerHTML =
-            '<span class="image-placeholder">Photo du produit à ajouter</span>';
-    };
+      const title = document.createElement("h3");
+      title.textContent = product.name;
 
-    imageBox.appendChild(img);
+      const description = document.createElement("p");
+      description.className = "product-description";
+      description.textContent = product.description || "";
 
-    const title = document.createElement("h3");
-    title.textContent = product.name;
-
-    const price = document.createElement("p");
-    price.className = "price";
-    price.textContent = product.price === null
-        ? "Nous contacter"
+      const price = document.createElement("p");
+      price.className = "price";
+      price.textContent = product.price === null
+        ? "Veuillez nous contacter"
         : product.price.toLocaleString("fr-FR") + " F CFA";
 
-    const message = product.price === null
-        ? "Bonjour AURÉVIA, je souhaite des informations sur " + product.name + "."
-        : "Bonjour AURÉVIA, je souhaite commander " +
-          product.name + " au prix de " +
-          product.price.toLocaleString("fr-FR") + " F CFA.";
+      if (product.images.length > 1) {
+        const galleryButton = document.createElement("button");
+        galleryButton.type = "button";
+        galleryButton.className = "gallery-button";
+        galleryButton.textContent = "Voir l'autre photo";
+        galleryButton.addEventListener("click", () => {
+          currentImage = (currentImage + 1) % product.images.length;
+          image.src = product.images[currentImage];
+          galleryButton.textContent = currentImage === 0 ? "Voir l'autre photo" : "Voir la première photo";
+        });
+        card.append(imageBox, category, title, description, price, galleryButton);
+      } else {
+        card.append(imageBox, category, title, description, price);
+      }
 
-    const button = document.createElement("a");
-    button.className = "order-button";
-    button.href = "https://wa.me/" + whatsapp +
-        "?text=" + encodeURIComponent(message);
-    button.target = "_blank";
-    button.rel = "noopener";
-    button.textContent = product.price === null
-        ? "SE RENSEIGNER"
-        : "COMMANDER SUR WHATSAPP";
-
-    card.append(imageBox, title, price, button);
-    list.appendChild(card);
-});
-</script>
-
+      const message = product.price === null
+        ? "Bonjour AURÉVIA, je souhaite avoir plus d'informations sur " + product.name + "."
+        : "Bonjour AURÉVIA, je souhaite commander " + product.name + " au prix de " + product.price.toLocaleString("fr-FR") + " F CFA.";
+      const orderButton = document.createElement("a");
+      orderButton.className = "order-button";
+      orderButton.href = "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(message);
+      orderButton.target = "_blank";
+      orderButton.rel = "noopener noreferrer";
+      orderButton.textContent = product.price === null ? "SE RENSEIGNER SUR WHATSAPP" : "COMMANDER SUR WHATSAPP";
+      card.appendChild(orderButton);
+      list.appendChild(card);
+    });
+  </script>
 </body>
 </html>
